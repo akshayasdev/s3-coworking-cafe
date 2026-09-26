@@ -1,0 +1,503 @@
+/* ==========================================
+   ADMIN REGISTER
+========================================== */
+
+.admin-register-section {
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 50px 20px;
+
+  background:
+    radial-gradient(
+      circle at top left,
+      #eadcc8 0%,
+      transparent 32%
+    ),
+    #f7f3ed;
+}
+
+
+.admin-register-container {
+  width: 100%;
+  max-width: 480px;
+
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   BRAND
+========================================== */
+
+.admin-register-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  margin-bottom: 25px;
+
+  color: #1c1c1c;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+.admin-register-logo {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #1c1c1c;
+
+  color: #ffffff;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+/* ==========================================
+   CARD
+========================================== */
+
+.admin-register-card {
+  padding: 40px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e1d8;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 20px 60px
+    rgba(28, 28, 28, 0.08);
+}
+
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.admin-back-button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  margin-bottom: 25px;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #777777;
+
+  font-size: 13px;
+
+  cursor: pointer;
+
+  transition:
+    color 0.2s ease;
+}
+
+
+.admin-back-button:hover {
+  color: #c89b5c;
+}
+
+
+/* ==========================================
+   ICON
+========================================== */
+
+.admin-register-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 22px;
+
+  border-radius: 13px;
+
+  background: #f7f3ed;
+
+  color: #c89b5c;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.admin-register-heading span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #c89b5c;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+
+.admin-register-heading h1 {
+  margin: 0 0 8px;
+
+  color: #1c1c1c;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+}
+
+
+.admin-register-heading p {
+  margin: 0 0 26px;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.admin-register-error {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid #f0c8c2;
+
+  border-radius: 9px;
+
+  background: #fff4f2;
+
+  color: #8f3026;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+.admin-register-error svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+}
+
+
+/* ==========================================
+   SUCCESS
+========================================== */
+
+.admin-register-success {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 10px;
+
+  margin-bottom: 18px;
+
+  padding: 13px 14px;
+
+  border:
+    1px solid #b9d9c3;
+
+  border-radius: 9px;
+
+  background: #eef8f1;
+
+  color: #3f7d58;
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+
+.admin-register-success svg {
+  flex-shrink: 0;
+
+  margin-top: 1px;
+}
+
+
+/* ==========================================
+   FORM
+========================================== */
+
+.admin-register-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+
+.admin-register-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 8px;
+}
+
+
+.admin-register-group label {
+  color: #242424;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+
+/* ==========================================
+   INPUT
+========================================== */
+
+.admin-register-input {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  height: 48px;
+
+  padding: 0 14px;
+
+  border:
+    1px solid #e1dbd2;
+
+  border-radius: 9px;
+
+  background: #ffffff;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.admin-register-input > svg {
+  flex-shrink: 0;
+
+  color: #999999;
+}
+
+
+.admin-register-input:focus-within {
+  border-color: #c89b5c;
+
+  box-shadow:
+    0 0 0 3px
+    rgba(200, 155, 92, 0.12);
+}
+
+
+.admin-register-input input {
+  width: 100%;
+
+  height: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #1c1c1c;
+
+  font-size: 14px;
+}
+
+
+.admin-register-input input::placeholder {
+  color: #aaaaaa;
+}
+
+
+/* ==========================================
+   PASSWORD TOGGLE
+========================================== */
+
+.password-toggle {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: none;
+
+  background: transparent;
+
+  color: #999999;
+
+  cursor: pointer;
+}
+
+
+.password-toggle:hover {
+  color: #c89b5c;
+}
+
+
+/* ==========================================
+   CREATE BUTTON
+========================================== */
+
+.admin-register-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  height: 50px;
+
+  margin-top: 6px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: #1c1c1c;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+
+.admin-register-button:hover {
+  background: #c89b5c;
+
+  transform: translateY(-1px);
+}
+
+
+.admin-register-button:disabled {
+  opacity: 0.65;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.admin-register-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  margin-top: 26px;
+}
+
+
+.admin-register-footer span {
+  color: #1c1c1c;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+
+.admin-register-footer p {
+  margin: 0;
+
+  color: #999999;
+
+  font-size: 12px;
+}
+
+
+.admin-register-copyright {
+  margin: 20px 0 0;
+
+  color: #999999;
+
+  font-size: 11px;
+
+  text-align: center;
+}
+
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 600px) {
+
+  .admin-register-section {
+    padding: 30px 15px;
+  }
+
+
+  .admin-register-card {
+    padding: 30px 22px;
+  }
+
+
+  .admin-register-heading h1 {
+    font-size: 28px;
+  }
+
+}

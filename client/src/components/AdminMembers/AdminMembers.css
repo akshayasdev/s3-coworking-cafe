@@ -1,0 +1,892 @@
+/* =========================================
+   S3 ADMIN MEMBERS
+========================================= */
+
+.admin-members {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 36px;
+
+  background: #f7f3ed;
+
+  color: #242424;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-members-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 28px;
+}
+
+.admin-members-header h1 {
+  margin: 0 0 6px;
+
+  color: #1c1c1c;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.admin-members-header p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   ADD MEMBER BUTTON
+========================================= */
+
+.admin-members-add-button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  min-width: 130px;
+  height: 44px;
+
+  padding: 0 17px;
+
+  border: 1px solid #1c1c1c;
+
+  border-radius: 10px;
+
+  background: #1c1c1c;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-members-add-button:hover {
+  background: #c89b5c;
+
+  border-color: #c89b5c;
+
+  color: #1c1c1c;
+
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 8px 18px rgba(200, 155, 92, 0.2);
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.admin-members-toolbar {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.admin-members-search {
+  width: 350px;
+
+  height: 48px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e1d8;
+
+  border-radius: 10px;
+
+  color: #8b8b8b;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-members-search:focus-within {
+  border-color: #c89b5c;
+
+  box-shadow:
+    0 0 0 3px rgba(200, 155, 92, 0.1);
+}
+
+.admin-members-search input {
+  width: 100%;
+
+  height: 100%;
+
+  min-width: 0;
+
+  padding: 0;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #242424;
+
+  font-family: inherit;
+
+  font-size: 13px;
+}
+
+.admin-members-search input::placeholder {
+  color: #999999;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.admin-members-error {
+  margin-bottom: 18px;
+
+  padding: 13px 15px;
+
+  border: 1px solid #efb8b8;
+
+  border-radius: 10px;
+
+  background: #fff4f4;
+
+  color: #b42318;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   LOADING / EMPTY MESSAGE
+========================================= */
+
+.admin-members-message {
+  padding: 60px 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e1d8;
+
+  border-radius: 14px;
+
+  color: #777777;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TABLE WRAPPER
+========================================= */
+
+.admin-members-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #ffffff;
+
+  border: 1px solid #e7e1d8;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 8px 24px rgba(28, 28, 28, 0.04);
+
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-members-table {
+  width: 100%;
+
+  min-width: 950px;
+
+  border-collapse: collapse;
+
+  table-layout: fixed;
+}
+
+
+/* =========================================
+   COLUMN WIDTHS
+========================================= */
+
+.admin-members-table th:nth-child(1),
+.admin-members-table td:nth-child(1) {
+  width: 65px;
+}
+
+.admin-members-table th:nth-child(2),
+.admin-members-table td:nth-child(2) {
+  width: 330px;
+}
+
+.admin-members-table th:nth-child(3),
+.admin-members-table td:nth-child(3) {
+  width: 170px;
+}
+
+.admin-members-table th:nth-child(4),
+.admin-members-table td:nth-child(4) {
+  width: 130px;
+}
+
+.admin-members-table th:nth-child(5),
+.admin-members-table td:nth-child(5) {
+  width: 125px;
+}
+
+.admin-members-table th:nth-child(6),
+.admin-members-table td:nth-child(6) {
+  width: 135px;
+}
+
+.admin-members-table th:nth-child(7),
+.admin-members-table td:nth-child(7) {
+  width: 110px;
+}
+
+
+/* =========================================
+   TABLE HEADER
+========================================= */
+
+.admin-members-table thead th {
+  height: 52px;
+
+  padding: 0 18px;
+
+  background: #faf8f4;
+
+  border-bottom: 1px solid #e7e1d8;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 0.7px;
+
+  text-align: left;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   TABLE BODY
+========================================= */
+
+.admin-members-table tbody td {
+  height: 74px;
+
+  padding: 12px 18px;
+
+  border-bottom: 1px solid #eeeae3;
+
+  color: #242424;
+
+  font-size: 13px;
+
+  text-align: left;
+
+  vertical-align: middle;
+}
+
+.admin-members-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-members-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.admin-members-table tbody tr:hover {
+  background: #fcfaf7;
+}
+
+
+/* =========================================
+   MEMBER CELL
+========================================= */
+
+.admin-member-info {
+  min-width: 0;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.admin-member-info strong {
+  display: block;
+
+  overflow: hidden;
+
+  color: #1c1c1c;
+
+  font-size: 13px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+.admin-member-info span {
+  display: block;
+
+  overflow: hidden;
+
+  color: #888888;
+
+  font-size: 11px;
+
+  line-height: 1.3;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   PHONE
+========================================= */
+
+.admin-member-phone {
+  color: #555555;
+
+  font-size: 13px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   PLAN
+========================================= */
+
+.admin-member-plan {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-height: 28px;
+
+  padding: 0 10px;
+
+  border-radius: 7px;
+
+  background: #f7f3ed;
+
+  color: #1c1c1c;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-member-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  min-width: 70px;
+
+  height: 28px;
+
+  padding: 0 10px;
+
+  border-radius: 20px;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  text-transform: capitalize;
+
+  white-space: nowrap;
+}
+
+.admin-member-status-active {
+  background: #edf7f0;
+
+  color: #3f7d58;
+}
+
+.admin-member-status-pending {
+  background: #fff5df;
+
+  color: #9a6b20;
+}
+
+.admin-member-status-inactive {
+  background: #fff0f0;
+
+  color: #b42318;
+}
+
+
+/* =========================================
+   JOINED DATE
+========================================= */
+
+.admin-member-date {
+  color: #555555;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   ACTIONS
+========================================= */
+
+.admin-member-actions {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+}
+
+.admin-member-edit-button,
+.admin-member-delete-button {
+  width: 34px;
+  height: 34px;
+
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+
+/* EDIT */
+
+.admin-member-edit-button {
+  border: 1px solid #d8cbb8;
+
+  background: #faf8f4;
+
+  color: #555555;
+}
+
+.admin-member-edit-button:hover {
+  border-color: #c89b5c;
+
+  background: #c89b5c;
+
+  color: #1c1c1c;
+
+  transform: translateY(-1px);
+}
+
+
+/* DELETE */
+
+.admin-member-delete-button {
+  border: 1px solid #efcaca;
+
+  background: #fff5f5;
+
+  color: #b42318;
+}
+
+.admin-member-delete-button:hover {
+  border-color: #b42318;
+
+  background: #b42318;
+
+  color: #ffffff;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   BUTTON DISABLED
+========================================= */
+
+.admin-member-edit-button:disabled,
+.admin-member-delete-button:disabled {
+  opacity: 0.45;
+
+  cursor: not-allowed;
+
+  transform: none;
+}
+
+
+/* =========================================
+   COUNT
+========================================= */
+
+.admin-members-count {
+  margin-top: 14px;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+.admin-members-count strong {
+  color: #242424;
+}
+
+
+/* =========================================
+   MODAL OVERLAY
+========================================= */
+
+.admin-member-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(28, 28, 28, 0.5);
+}
+
+
+/* =========================================
+   MODAL
+========================================= */
+
+.admin-member-modal {
+  width: 100%;
+
+  max-width: 520px;
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  background: #ffffff;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 25px 70px rgba(0, 0, 0, 0.2);
+}
+
+.admin-member-modal-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  margin-bottom: 24px;
+}
+
+.admin-member-modal-header h2 {
+  margin: 0;
+
+  color: #1c1c1c;
+
+  font-size: 23px;
+}
+
+.admin-member-modal-close {
+  width: 34px;
+  height: 34px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #e7e1d8;
+
+  border-radius: 8px;
+
+  background: #ffffff;
+
+  color: #555555;
+
+  cursor: pointer;
+}
+
+.admin-member-modal-close:hover {
+  background: #f7f3ed;
+
+  border-color: #c89b5c;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.admin-member-form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+.admin-member-form-group {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+}
+
+.admin-member-form-group label {
+  color: #242424;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+.admin-member-form-group input,
+.admin-member-form-group select {
+  width: 100%;
+
+  height: 45px;
+
+  padding: 0 12px;
+
+  border: 1px solid #e7e1d8;
+
+  border-radius: 9px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #242424;
+
+  font-size: 13px;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.admin-member-form-group input:focus,
+.admin-member-form-group select:focus {
+  border-color: #c89b5c;
+
+  box-shadow:
+    0 0 0 3px rgba(200, 155, 92, 0.1);
+}
+
+
+/* =========================================
+   MODAL ACTIONS
+========================================= */
+
+.admin-member-modal-actions {
+  display: flex;
+
+  justify-content: flex-end;
+
+  gap: 10px;
+
+  margin-top: 8px;
+}
+
+.admin-member-cancel-button,
+.admin-member-save-button {
+  height: 43px;
+
+  padding: 0 18px;
+
+  border-radius: 9px;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.admin-member-cancel-button {
+  border: 1px solid #e7e1d8;
+
+  background: #ffffff;
+
+  color: #555555;
+}
+
+.admin-member-cancel-button:hover {
+  background: #f7f3ed;
+}
+
+.admin-member-save-button {
+  border: 1px solid #1c1c1c;
+
+  background: #1c1c1c;
+
+  color: #ffffff;
+}
+
+.admin-member-save-button:hover {
+  border-color: #c89b5c;
+
+  background: #c89b5c;
+
+  color: #1c1c1c;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .admin-members {
+    padding: 28px;
+  }
+
+  .admin-members-table {
+    min-width: 950px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .admin-members {
+    padding: 22px 18px;
+  }
+
+  .admin-members-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .admin-members-header h1 {
+    font-size: 28px;
+  }
+
+  .admin-members-add-button {
+    width: 100%;
+  }
+
+  .admin-members-search {
+    width: 100%;
+  }
+
+  .admin-members-table {
+    min-width: 950px;
+  }
+
+  .admin-member-modal {
+    padding: 22px;
+
+    border-radius: 13px;
+  }
+}

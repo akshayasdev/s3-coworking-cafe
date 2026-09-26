@@ -1,0 +1,336 @@
+/* ================================
+   S3 CAFE MENU
+================================ */
+
+.cafe-menu-section {
+  width: 100%;
+  padding: 100px 0;
+  background: #f7f3ed;
+}
+
+.cafe-menu-container {
+  width: 90%;
+  max-width: 1250px;
+  margin: 0 auto;
+}
+
+/* ================================
+   HEADER
+================================ */
+
+.cafe-menu-heading {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 45px;
+}
+
+.cafe-menu-heading span {
+  display: inline-block;
+  margin-bottom: 12px;
+
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+
+  color: #c89b5c;
+}
+
+.cafe-menu-heading h2 {
+  margin-bottom: 15px;
+
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 700;
+
+  color: #1c1c1c;
+}
+
+.cafe-menu-heading h2 strong {
+  color: #c89b5c;
+}
+
+.cafe-menu-heading p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: #777777;
+}
+
+/* ================================
+   CATEGORY BUTTONS
+================================ */
+
+.menu-categories {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+
+  margin-bottom: 45px;
+
+  flex-wrap: wrap;
+}
+
+.menu-categories button {
+  border: 1px solid #e7e1d8;
+  background: #ffffff;
+
+  padding: 11px 22px;
+
+  border-radius: 30px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  color: #555555;
+
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+}
+
+.menu-categories button:hover {
+  border-color: #c89b5c;
+  color: #c89b5c;
+}
+
+.menu-categories button.active {
+  background: #1c1c1c;
+  border-color: #1c1c1c;
+  color: #ffffff;
+}
+
+/* ================================
+   MENU GRID
+================================ */
+
+.menu-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 28px;
+}
+
+/* ================================
+   MENU CARD
+================================ */
+
+.menu-card {
+  background: #ffffff;
+
+  border: 1px solid #e7e1d8;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 520px;
+
+  box-shadow: 0 8px 25px rgba(28, 28, 28, 0.06);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.menu-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 18px 40px rgba(28, 28, 28, 0.12);
+}
+
+/* ================================
+   IMAGE
+================================ */
+
+.menu-image {
+  width: 100%;
+  height: 250px;
+
+  overflow: hidden;
+
+  background: #eee8df;
+}
+
+.menu-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+  object-position: center;
+
+  transition: transform 0.4s ease;
+}
+
+.menu-card:hover .menu-image img {
+  transform: scale(1.05);
+}
+
+/* ================================
+   CARD CONTENT
+================================ */
+
+.menu-card-content {
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+/* ================================
+   NAME + PRICE
+================================ */
+
+.menu-card-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 15px;
+
+  margin-bottom: 10px;
+}
+
+.menu-card-header h3 {
+  margin: 0;
+
+  font-size: 20px;
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  color: #1c1c1c;
+}
+
+.menu-card-header span {
+  flex-shrink: 0;
+
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #c89b5c;
+}
+
+/* ================================
+   DESCRIPTION
+================================ */
+
+.menu-card-content > p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.6;
+
+  color: #777777;
+
+  min-height: 45px;
+}
+
+/* ================================
+   ADD TO CART BUTTON
+================================ */
+
+.add-to-cart-button {
+  width: 100%;
+
+  margin-top: auto;
+  padding: 13px 18px;
+
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 8px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #1c1c1c;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.add-to-cart-button:hover {
+  background: #c89b5c;
+
+  transform: translateY(-2px);
+}
+
+.add-to-cart-button:active {
+  transform: translateY(0);
+}
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+  .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cafe-menu-heading h2 {
+    font-size: 42px;
+  }
+}
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+  .cafe-menu-section {
+    padding: 70px 0;
+  }
+
+  .cafe-menu-container {
+    width: 92%;
+  }
+
+  .cafe-menu-heading h2 {
+    font-size: 36px;
+  }
+
+  .cafe-menu-heading p {
+    font-size: 15px;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+    gap: 22px;
+  }
+
+  .menu-image {
+    height: 230px;
+  }
+
+  .menu-card {
+    min-height: auto;
+  }
+
+  .menu-categories {
+    gap: 8px;
+  }
+
+  .menu-categories button {
+    padding: 9px 16px;
+    font-size: 13px;
+  }
+}

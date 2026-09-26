@@ -1,0 +1,481 @@
+/* =========================================
+   S3 ADMIN LAYOUT
+========================================= */
+
+.admin-layout {
+  min-height: 100vh;
+  background: #f7f3ed;
+}
+
+
+/* =========================================
+   SIDEBAR
+========================================= */
+
+.admin-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  z-index: 1000;
+
+  width: 260px;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 28px 18px 20px;
+
+  background: #1c1c1c;
+
+  color: #ffffff;
+
+  border-right: 1px solid #2b2b2b;
+
+  box-shadow:
+    8px 0 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.admin-sidebar-logo {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 4px 10px 28px;
+
+  border-bottom: 1px solid #303030;
+}
+
+.admin-logo-mark {
+  width: 44px;
+  height: 44px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 12px;
+
+  background: #c89b5c;
+
+  color: #1c1c1c;
+
+  font-size: 18px;
+  font-weight: 800;
+
+  box-shadow:
+    0 6px 18px rgba(200, 155, 92, 0.18);
+}
+
+.admin-logo-text {
+  display: flex;
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.admin-logo-text strong {
+  color: #ffffff;
+
+  font-size: 20px;
+  line-height: 1;
+
+  letter-spacing: 0.5px;
+}
+
+.admin-logo-text span {
+  color: #888888;
+
+  font-size: 8px;
+  font-weight: 600;
+
+  letter-spacing: 1.6px;
+}
+
+
+/* =========================================
+   CLOSE BUTTON
+   HIDDEN ON DESKTOP
+========================================= */
+
+.admin-sidebar-close {
+  display: none;
+
+  width: 34px;
+  height: 34px;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-left: auto;
+
+  padding: 0;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #292929;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+
+/* =========================================
+   ADMIN LABEL
+========================================= */
+
+.admin-sidebar-label {
+  margin: 28px 10px 12px;
+
+  color: #777777;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.admin-sidebar-nav {
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.admin-sidebar-link {
+  position: relative;
+
+  width: 100%;
+  height: 48px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 0 14px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: #999999;
+
+  font-family: inherit;
+
+  font-size: 13px;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.admin-sidebar-link svg {
+  flex-shrink: 0;
+
+  stroke-width: 1.8;
+}
+
+.admin-sidebar-link:hover {
+  background: #282828;
+
+  color: #ffffff;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================
+   ACTIVE LINK
+========================================= */
+
+.admin-sidebar-link-active {
+  background: #c89b5c;
+
+  color: #1c1c1c;
+
+  font-weight: 700;
+
+  box-shadow:
+    0 8px 18px rgba(200, 155, 92, 0.12);
+}
+
+.admin-sidebar-link-active:hover {
+  background: #c89b5c;
+
+  color: #1c1c1c;
+
+  transform: none;
+}
+
+
+/* =========================================
+   SIDEBAR BOTTOM
+========================================= */
+
+.admin-sidebar-bottom {
+  margin-top: auto;
+}
+
+.admin-sidebar-divider {
+  height: 1px;
+
+  margin: 0 8px 14px;
+
+  background: #303030;
+}
+
+
+/* =========================================
+   VIEW WEBSITE
+========================================= */
+
+.admin-view-website-link {
+  margin-bottom: 5px;
+
+  color: #c89b5c;
+}
+
+.admin-view-website-link:hover {
+  background: #292929;
+
+  color: #e0b979;
+
+  transform: translateX(2px);
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.admin-logout-link {
+  color: #888888;
+}
+
+.admin-logout-link:hover {
+  background: #292222;
+
+  color: #e69b91;
+
+  transform: none;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.admin-main-content {
+  width: calc(100% - 260px);
+
+  min-height: 100vh;
+
+  margin-left: 260px;
+
+  background: #f7f3ed;
+}
+
+
+/* =========================================
+   MOBILE HEADER
+========================================= */
+
+.admin-mobile-header {
+  display: none;
+}
+
+
+/* =========================================
+   SIDEBAR OVERLAY
+========================================= */
+
+.admin-sidebar-overlay {
+  display: none;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+  .admin-sidebar {
+    width: 235px;
+  }
+
+  .admin-main-content {
+    width: calc(100% - 235px);
+
+    margin-left: 235px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .admin-layout {
+    display: block;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE TOP HEADER
+  ----------------------------------------- */
+
+  .admin-mobile-header {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 900;
+
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 0 18px;
+
+    background: #1c1c1c;
+
+    border-bottom: 1px solid #303030;
+  }
+
+
+  .admin-mobile-menu-button {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 0;
+
+    border: none;
+    border-radius: 9px;
+
+    background: #292929;
+
+    color: #ffffff;
+
+    cursor: pointer;
+  }
+
+
+  .admin-mobile-logo {
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+  }
+
+  .admin-mobile-logo strong {
+    color: #c89b5c;
+
+    font-size: 20px;
+  }
+
+  .admin-mobile-logo span {
+    color: #888888;
+
+    font-size: 9px;
+    font-weight: 600;
+
+    letter-spacing: 1.4px;
+  }
+
+
+  /* -----------------------------------------
+     MOBILE SIDEBAR
+  ----------------------------------------- */
+
+  .admin-sidebar {
+    width: 275px;
+
+    transform: translateX(-100%);
+
+    transition:
+      transform 0.25s ease;
+
+    box-shadow:
+      12px 0 35px rgba(0, 0, 0, 0.22);
+  }
+
+
+  .admin-sidebar-open {
+    transform: translateX(0);
+  }
+
+
+  /* -----------------------------------------
+     SHOW CLOSE BUTTON ONLY ON MOBILE
+  ----------------------------------------- */
+
+  .admin-sidebar-close {
+    display: flex;
+  }
+
+
+  /* -----------------------------------------
+     OVERLAY
+  ----------------------------------------- */
+
+  .admin-sidebar-overlay {
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 950;
+
+    display: block;
+
+    background: rgba(0, 0, 0, 0.48);
+  }
+
+
+  /* -----------------------------------------
+     MAIN CONTENT
+  ----------------------------------------- */
+
+  .admin-main-content {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding-top: 64px;
+  }
+}
